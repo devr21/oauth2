@@ -1,0 +1,22 @@
+server: 
+  port: 8080
+  contextPath: /auth
+logging:
+  org.springframework.security: DEBUG
+keystore:
+  password: mysecretkey
+datasource:
+  driverClassName: com.mysql.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/system
+  username: dbadmin
+  password: 
+  tomcat:
+    max-wait: 20000
+    max-active: 50
+    max-idle: 20
+    min-idle: 15
+hibernate:
+  dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  show_sql: true
+  hbm2ddl.auto: create
+data.initialize: true
